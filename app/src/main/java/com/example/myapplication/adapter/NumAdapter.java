@@ -33,9 +33,11 @@ public class NumAdapter extends RecyclerView.Adapter<NumAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        //在适配器这边把文字提前整进去
     holder.tvName.setText("姓名："+list.get(position).getName());
     holder.tvSkill.setText("机试成绩："+list.get(position).getSkill());
     holder.tvTheory.setText("理论成绩："+list.get(position).getTheory());
+    //设置长按监听
     holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
         @Override
         public boolean onLongClick(View view) {

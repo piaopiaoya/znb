@@ -39,9 +39,11 @@ public class CollFragment extends Fragment implements MainContrart.getNumberView
     }
 
     private void initListener() {
+        //设置长按监听
         adapter.setOnLongClickItemListener(new NumAdapter.OnLongClickItemListener() {
             @Override
             public void onLongClickItem(int position) {
+                //创建一个新位置 把它移出去
                 mposition = position;
                 list.remove(mposition);
                 adapter.notifyDataSetChanged();
